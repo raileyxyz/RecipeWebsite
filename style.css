@@ -1,16 +1,27 @@
+/* For users scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+#home {
+  scroll-margin-top: 100px;
+}
+
 /* Header and Navigation */
 body {
-  background-color: white;
-  color: black;
+  background-color: #faf8fc;
+  color: #0d0811;
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, box-shadow 0.3s;
+  background-color: #faf8fc;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navBar {
@@ -38,25 +49,49 @@ header {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
-  color: black;
+  color: #0d0811;
 }
 
 .nav-links li a:hover {
   color: red;
 }
 
-/* Main Section */
+#darkModeBtn {
+  background-color: #e51515;
+  color: #f3eef7;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#darkModeBtn:hover {
+  background-color: #680707;
+}
+
+/* Home Section */
 main {
   text-align: center;
 }
 
 #title {
   font-size: 3.5em;
+  color: #0d0811;
+}
+
+#title-color {
+  color: #e51515;
+}
+
+#title2 {
+  font-size: 1.5em;
+  color: #0d0811;
 }
 
 img {
   width: 97%;
-  height: 380px;
+  height: 670px;
   border-radius: 5px;
 }
 
@@ -78,8 +113,8 @@ img {
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #e23427;
-  color: white;
+  background-color: #e51515;
+  color: #f3eef7;
   border: none;
   padding: 12px 24px;
   border-radius: 8px;
@@ -89,39 +124,113 @@ img {
 }
 
 .img-btn:hover {
-  background-color: #db1d10;
+  background-color: #680707;
 }
 
-/* Dark mode styling */
+/* Selecting foods section */
+#service {
+  text-align: center;
+  padding: 40px;
+  background-color: #faf8fc;
+}
+
+.food-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.food-item {
+  background-color: #faf8fc;
+  border: none;
+  border-radius: 10px;
+  width: 18%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.food-item:hover {
+  transform: scale(1.05);
+}
+
+.food-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.food-item button {
+  margin-top: 10px;
+  background-color: #e51515;
+  color: #faf8fc;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.food-item button:hover {
+  background-color: #680707;
+}
+
+/* Dark mode website styling */
 .dark-mode {
-  background-color: #141013;
-  color: white;
+  background-color: #050307;
+  color: #f3eef7;
 }
 
 .dark-mode header {
-  background-color: #141013;
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  background-color: #050307;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+.dark-mode #title {
+  font-size: 3.5em;
+  color: #f3eef7;
+}
+
+.dark-mode #title2 {
+  font-size: 1.5em;
+  color: #f3eef7;
 }
 
 .dark-mode .nav-links li a {
-  color: white;
+  color: #f3eef7;
 }
 
 .dark-mode .nav-links li a:hover {
-  color: red;
-}
-
-#darkModeBtn {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  color: #e51515;
 }
 
 .dark-mode #darkModeBtn {
-  background-color: #141013;
-  color: white;
+  color: #050307;
+}
+
+.dark-mode .img-btn {
+  color: #050307;
+}
+
+.dark-mode #service {
+  background-color: #050307;
+}
+
+.dark-mode .food-item {
+  background-color: #050307;
+  color: #f3eef7;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .food-item button {
+  background-color: #e51515;
+  color: #f3eef7;
+}
+
+.dark-mode .food-item button:hover {
+  background-color: #680707;
 }
