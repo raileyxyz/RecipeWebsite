@@ -1,4 +1,4 @@
-// dark mode
+// Dark mode code
 const darkModeBtn = document.getElementById("darkModeBtn");
 
 darkModeBtn.addEventListener("click", () => {
@@ -9,4 +9,13 @@ darkModeBtn.addEventListener("click", () => {
   } else {
     darkModeBtn.textContent = "Dark Mode";
   }
+});
+
+// Get started button scroll in service section
+const getStartedBtn = document.querySelector(".img-btn");
+
+getStartedBtn.addEventListener("click", () => {
+  document.querySelector("#service").scrollIntoView({
+    behavior: "smooth",
+  });
 });
