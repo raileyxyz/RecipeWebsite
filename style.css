@@ -31,10 +31,23 @@ header {
   padding: 10px 100px;
 }
 
-.logo {
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Logo image */
+.logo-container img {
+  width: 50px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1rem;
   font-weight: bold;
-  font-size: 1.5em;
-  transition: color 0.3s;
+  color: #0d0811;
 }
 
 .nav-links {
@@ -50,6 +63,7 @@ header {
   font-weight: 500;
   transition: color 0.3s;
   color: #0d0811;
+  font-size: 20px;
 }
 
 .nav-links li a:hover {
@@ -78,49 +92,63 @@ main {
 #title {
   font-size: 3.5em;
   color: #0d0811;
+  margin-bottom: 10px;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+  text-shadow: 0 0 10px rgba(13, 8, 17, 0.6);
 }
 
 #title-color {
   color: #e51515;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+  text-shadow: 0 0 10px rgba(229, 21, 21, 0.6);
+}
+
+#title:hover {
+  color: #e51515;
+  text-shadow: 0 0 10px rgba(229, 21, 21, 0.6);
+}
+
+#title:hover #title-color {
+  color: #0d0811;
+  text-shadow: 0 0 10px rgba(13, 8, 17, 0.6);
 }
 
 #title2 {
   font-size: 1.5em;
   color: #0d0811;
+  margin-bottom: 30px;
 }
 
-img {
-  width: 97%;
-  height: 670px;
-  border-radius: 5px;
-}
-
-/* Button inside image */
 .image-container {
   position: relative;
-  display: inline-block;
+  width: 100%;
+  max-width: 1850px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .image-container img {
   width: 100%;
-  max-width: 600px;
-  border-radius: 5px;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 12px;
   display: block;
 }
 
 .img-btn {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #e51515;
   color: #f3eef7;
   border: none;
-  padding: 12px 24px;
+  padding: 14px 32px;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .img-btn:hover {
@@ -131,7 +159,7 @@ img {
 #service {
   text-align: center;
   padding: 40px;
-  background-color: #faf8fc;
+  background-color: #fcf8f8;
 }
 
 .food-container {
@@ -142,12 +170,12 @@ img {
 }
 
 .food-item {
-  background-color: #faf8fc;
+  background-color: #fcf8f8;
   border: none;
   border-radius: 10px;
   width: 18%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  padding: 15px;
+  padding: 5px 15px;
   text-align: center;
   transition: transform 0.2s ease;
 }
@@ -158,7 +186,7 @@ img {
 
 .food-item img {
   width: 100%;
-  height: 120px;
+  height: 160px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -168,7 +196,7 @@ img {
   background-color: #e51515;
   color: #faf8fc;
   border: none;
-  padding: 8px 15px;
+  padding: 8px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -189,14 +217,38 @@ img {
   box-shadow: none;
 }
 
+.dark-mode .logo-text {
+  color: #f3eef7;
+}
+
 .dark-mode #title {
   font-size: 3.5em;
   color: #f3eef7;
+  margin-bottom: 10px;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+  text-shadow: 0 0 15px rgba(243, 238, 247, 0.8);
+}
+
+.dark-mode #title-color {
+  color: #e51515;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+  text-shadow: 0 0 15px rgba(229, 21, 21, 0.8);
 }
 
 .dark-mode #title2 {
   font-size: 1.5em;
   color: #f3eef7;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+.dark-mode #title:hover {
+  color: #e51515;
+  text-shadow: 0 0 15px rgba(229, 21, 21, 0.8);
+}
+
+.dark-mode #title:hover #title-color {
+  color: #f3eef7;
+  text-shadow: 0 0 15px rgba(243, 238, 247, 0.8);
 }
 
 .dark-mode .nav-links li a {
@@ -233,4 +285,8 @@ img {
 
 .dark-mode .food-item button:hover {
   background-color: #680707;
+}
+
+.dark-mode .food-item button {
+  color: #050307;
 }

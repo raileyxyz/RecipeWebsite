@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Recipe Website</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/image/LOGO.png" type="image/x-icon" />
   </head>
   <body>
     <header>
       <nav class="navBar">
-        <div class="logo">LOGO</div>
+        <div class="logo-container">
+          <img src="/image/LOGO.png" alt="Logo" class="logo" />
+          <span class="logo-text">Recipe's Pastry</span>
+        </div>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#service">Service</a></li>
@@ -29,109 +33,109 @@
           A Website of Pastry Recipes with Ingredient Calculator based on your
           Targer Servings
         </h3>
-        <img src="/image/LPImage.png" alt="Landing Page Image" />
-        <button class="img-btn">Get Started</button>
+        <div class="image-container">
+          <img src="/image/LPImage.png" alt="Landing Page Image" />
+          <button class="img-btn">Get Started</button>
+        </div>
       </section>
 
       <section id="service">
-        <h1>Select Food</h1>
+        <h1>SELECT FOOD</h1>
         <div class="food-container">
           <div class="food-item">
             <p id="food-name">COOKIES</p>
-            <img src="/image/logo.png" alt="Food 1 Image" />
+            <img src="/image/Cookie.jpg" alt="Food 1 Image" />
             <button>Select</button>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-              maiores ipsa sequi officia aspernatur esse ab commodi cupiditate
-              hic? Vel minima consectetur vero itaque eaque ullam sint.
-              Quisquam, id necessitatibus.
+              Freshly baked cookies with a golden crisp outside and a soft,
+              chewy center. Each bite is filled with rich chocolate chips that
+              melt perfectly in your mouth. A classic treat that’s perfect for
+              any time of the day.
             </p>
           </div>
 
           <div class="food-item">
             <p>BROWNIES</p>
-            <img src="/image/logo.png" alt="Food 2 Image" />
+            <img src="/image/Brownies.jpg" alt="Food 2 Image" />
             <button>Select</button>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-              maiores ipsa sequi officia aspernatur esse ab commodi cupiditate
-              hic? Vel minima consectetur vero itaque eaque ullam sint.
-              Quisquam, id necessitatibus.
+              Moist and fudgy chocolate brownies baked to perfection. They have
+              a deep cocoa flavor and a slightly crisp top layer. A delightful
+              dessert that satisfies every chocolate craving.
             </p>
           </div>
 
           <div class="food-item">
             <p>CHOCO MUFFINS</p>
-            <img src="/image/logo.png" alt="Food 3 Image" />
+            <img src="/image/Muffin.jpg" alt="Food 3 Image" />
             <button>Select</button>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-              maiores ipsa sequi officia aspernatur esse ab commodi cupiditate
-              hic? Vel minima consectetur vero itaque eaque ullam sint.
-              Quisquam, id necessitatibus.
+              Soft, fluffy chocolate muffins that are rich and flavorful. Loaded
+              with chocolate chunks for an extra burst of sweetness. Ideal for
+              breakfast, snacks, or dessert.
             </p>
           </div>
 
           <div class="food-item">
             <p>CHOCO CUPCAKE</p>
-            <img src="/image/logo.png" alt="Food 4 Image" />
+            <img src="/image/Chococupcake.jpg" alt="Food 4 Image" />
             <button>Select</button>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-              maiores ipsa sequi officia aspernatur esse ab commodi cupiditate
-              hic? Vel minima consectetur vero itaque eaque ullam sint.
-              Quisquam, id necessitatibus.
+              Deliciously moist chocolate cupcakes with smooth, creamy frosting.
+              Each bite is a mix of sweetness and rich cocoa flavor. Perfect for
+              parties or a sweet treat at home.
             </p>
           </div>
 
           <div class="food-item">
             <p>EGG PIE</p>
-            <img src="/image/logo.png" alt="Food 5 Image" />
+            <img src="/image/eggpie.jpg" alt="Food 5 Image" />
             <button>Select</button>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-              maiores ipsa sequi officia aspernatur esse ab commodi cupiditate
-              hic? Vel minima consectetur vero itaque eaque ullam sint.
-              Quisquam, id necessitatibus.
+              A Filipino favorite with a creamy custard filling and buttery
+              crust. Baked until golden brown and slightly caramelized on top. A
+              warm, comforting dessert loved by many.
             </p>
           </div>
 
           <div class="food-item">
             <p>GLAZED DOUGHNUT</p>
-            <img src="/image/logo.png" alt="Food 6 Image" />
+            <img src="/image/GlazedDonut.jpg" alt="Food 6 Image" />
             <button>Select</button>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-              maiores ipsa sequi officia aspernatur esse ab commodi cupiditate
-              hic? Vel minima consectetur vero itaque eaque ullam sint.
-              Quisquam, id necessitatibus.
+              Soft and airy doughnuts coated in a shiny sugar glaze. Sweet,
+              light, and melts in your mouth with every bite. A perfect treat to
+              pair with coffee or milk.
             </p>
           </div>
 
           <div class="food-item">
-            <p>Food 7</p>
-            <img src="/image/logo.png" alt="Food 6 Image" />
+            <p>PUDDING</p>
+            <img src="/image/Pudding.jpg" alt="Food 6 Image" />
             <button>Select</button>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-              maiores ipsa sequi officia aspernatur esse ab commodi cupiditate
-              hic? Vel minima consectetur vero itaque eaque ullam sint.
-              Quisquam, id necessitatibus.
+              Smooth and creamy pudding with a rich, comforting taste. Made with
+              simple ingredients for a soft, melt-in-your-mouth texture. A
+              timeless dessert that never goes out of style.
             </p>
           </div>
 
           <div class="food-item">
-            <p>Food 8</p>
-            <img src="/image/logo.png" alt="Food 6 Image" />
+            <p>CHEESECAKE</p>
+            <img src="/image/Cheesecake.jpg" alt="Food 6 Image" />
             <button>Select</button>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-              maiores ipsa sequi officia aspernatur esse ab commodi cupiditate
-              hic? Vel minima consectetur vero itaque eaque ullam sint.
-              Quisquam, id necessitatibus.
+              Rich and creamy cheesecake on a buttery graham crust. Topped with
+              a touch of sweetness for the perfect balance of flavor. Every
+              slice is pure indulgence and satisfaction.
             </p>
           </div>
         </div>
+      </section>
+
+      <section id="about">
+        <h1>ABOUT US</h1>
+        <h2>OUR TEAM</h2>
       </section>
     </main>
 
