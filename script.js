@@ -19,3 +19,10 @@ getStartedBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Cookies select button to another HTML page
+const cookiesBtn = document.getElementById("cookiesBtn");
+
+cookiesBtn.addEventListener("click", () => {
+  window.location.href = "cookies.html";
+});

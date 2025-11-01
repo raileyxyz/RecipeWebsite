@@ -50,6 +50,12 @@ header {
   color: #0d0811;
 }
 
+.logo-text:hover {
+  color: #e51515;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+  text-shadow: 0 0 10px rgba(229, 21, 21, 0.6);
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -77,11 +83,12 @@ header {
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 #darkModeBtn:hover {
-  background-color: #680707;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(229, 21, 21, 0.6);
 }
 
 /* Home Section */
@@ -144,15 +151,16 @@ main {
   background-color: #e51515;
   color: #f3eef7;
   border: none;
-  padding: 14px 32px;
+  padding: 14px 28px;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
 }
 
 .img-btn:hover {
-  background-color: #680707;
+  transform: translate(-50%, -60%);
+  box-shadow: 0 8px 30px rgba(229, 21, 21, 0.6);
 }
 
 /* Selecting foods section */
@@ -160,6 +168,10 @@ main {
   text-align: center;
   padding: 40px;
   background-color: #fcf8f8;
+}
+
+#select-pastry {
+  color: #e51515;
 }
 
 .food-container {
@@ -170,7 +182,7 @@ main {
 }
 
 .food-item {
-  background-color: #fcf8f8;
+  background-color: #f7e3e3;
   border: none;
   border-radius: 10px;
   width: 18%;
@@ -199,10 +211,12 @@ main {
   padding: 8px 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .food-item button:hover {
-  background-color: #680707;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(229, 21, 21, 0.8);
 }
 
 /* Dark mode website styling */
@@ -219,6 +233,10 @@ main {
 
 .dark-mode .logo-text {
   color: #f3eef7;
+}
+
+.dark-mode .logo-text:hover {
+  color: #e51515;
 }
 
 .dark-mode #title {
@@ -272,7 +290,7 @@ main {
 }
 
 .dark-mode .food-item {
-  background-color: #050307;
+  background-color: #3a1f1f;
   color: #f3eef7;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -280,13 +298,5 @@ main {
 
 .dark-mode .food-item button {
   background-color: #e51515;
-  color: #f3eef7;
-}
-
-.dark-mode .food-item button:hover {
-  background-color: #680707;
-}
-
-.dark-mode .food-item button {
   color: #050307;
 }
