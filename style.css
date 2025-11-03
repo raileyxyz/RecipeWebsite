@@ -219,12 +219,73 @@ main {
   box-shadow: 0 4px 15px rgba(229, 21, 21, 0.8);
 }
 
+/* About us section */
+#about-us {
+  color: #e51515;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px 20px;
+}
+
+.team-profile {
+  border: none;
+  border-radius: 15px;
+  background-color: #f7e3e3;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.team-profile img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.team-names {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.team-profile p {
+  color: #555;
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.team-message {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 30px 50px;
+  color: #333;
+  line-height: 1.6;
+}
+
 /* Dark mode website styling */
 .dark-mode {
   background-color: #050307;
   color: #f3eef7;
 }
 
+/* Nav and home dark mode */
 .dark-mode header {
   background-color: #050307;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -285,6 +346,7 @@ main {
   color: #050307;
 }
 
+/* Selecting pastry dark mode */
 .dark-mode #service {
   background-color: #050307;
 }
@@ -299,4 +361,24 @@ main {
 .dark-mode .food-item button {
   background-color: #e51515;
   color: #050307;
+}
+
+/* About us dark mode */
+.dark-mode .team-profile {
+  background-color: #3a1f1f;
+  color: #f3eef7;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .team-names {
+  color: #f3eef7;
+}
+
+.dark-mode .team-profile p {
+  color: #cfcfcf;
+}
+
+.dark-mode .team-message {
+  color: #f3eef7;
 }
