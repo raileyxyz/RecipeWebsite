@@ -3,26 +3,335 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe's Pastry</title>
+    <title>Recipe's Pastry Cookies</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="/image/LOGO.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/pastry-image/LOGO.png"
+      type="image/x-icon"
+    />
+    <style>
+      body {
+        font-family: "Georgia", serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fcf8f8;
+        color: #0d0811;
+      }
+
+      h1 {
+        font-weight: bold;
+      }
+
+      /* MAIN COOKIES CONTAINER */
+      .cookies-container {
+        max-width: 1400px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 40px 30px;
+        gap: 80px;
+      }
+
+      /* LEFT SIDE OR SERVING CONTAINER */
+      .serving-container {
+        width: 350px;
+        text-align: center;
+      }
+
+      .serving-container h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #e51515;
+      }
+
+      .serving-container img {
+        width: 330px;
+        height: 330px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      .serving-input {
+        margin-top: 10px;
+        font-size: 1.1rem;
+      }
+
+      .serving-input input {
+        padding: 6px 8px;
+        font-size: 1rem;
+        width: 85px;
+      }
+
+      .serving-input button {
+        padding: 6px 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: #e51515;
+        border: none;
+        border-radius: 5px;
+        color: #fcf8f8;
+      }
+
+      .note-title {
+        margin-top: 18px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .note-text {
+        margin-top: 5px;
+        font-size: 1rem;
+        line-height: 1.4;
+        width: 300px;
+        text-align: left;
+      }
+
+      /*  MIDDLE SIDE OR TABLE CONTAINER */
+      .ingredients-container {
+        width: 360px;
+      }
+
+      .ingredients-container h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #e51515;
+      }
+
+      .ingredients-container table {
+        width: 100%;
+        font-size: 1.15rem;
+        border-spacing: 0 12px;
+      }
+
+      .ingredients-container th {
+        font-size: 1.2rem;
+        text-align: left;
+        padding-bottom: 10px;
+      }
+
+      .ingredients-container td {
+        padding: 6px 0;
+        border-bottom: 2px solid #000;
+      }
+
+      /* RIGHT SIDE OR PROCEDURES CONTAINER */
+      .procedures-container {
+        width: 420px;
+      }
+
+      .procedures-container h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #e51515;
+      }
+
+      .procedures-container ol {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        text-align: left;
+      }
+
+      .procedures-container li {
+        margin-bottom: 12px;
+      }
+
+      /* DARK MODE */
+      body.dark-mode {
+        background-color: #050307;
+        color: #faf8fc;
+      }
+
+      .dark-mode h1 {
+        color: #faf8fc;
+      }
+
+      .dark-mode table td,
+      .dark-mode table th {
+        color: #faf8fc;
+        border-bottom: 2px solid #faf8fc;
+      }
+
+      .dark-mode .serving-input input {
+        background-color: #faf8fc;
+        color: #050307;
+        border: 1px solid #555;
+      }
+
+      .dark-mode .serving-input button {
+        background-color: #e51515;
+        color: #050307;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .dark-mode ol li {
+        color: #faf8fc;
+      }
+
+      .dark-mode .note-text {
+        color: #faf8fc;
+      }
+
+      .dark-mode header,
+      .dark-mode .navBar {
+        background-color: #050307;
+      }
+
+      .dark-mode .nav-links a {
+        color: #faf8fc;
+      }
+
+      .dark-mode #darkModeBtn {
+        background-color: #e51515;
+        color: #050307;
+        border: none;
+      }
+
+      .dark-mode .serving-container h1,
+      .procedures-container h1,
+      .ingredients-container h1 {
+        color: #e51515;
+      }
+    </style>
   </head>
   <body>
+    <!-- HEADER AND NAVIGATION -->
     <header>
       <nav class="navBar">
         <div class="logo-container">
-          <img src="/image/LOGO.png" alt="Logo" class="logo" />
+          <img src="/pastry-image/LOGO.png" alt="Logo" class="logo" />
           <span class="logo-text">Recipe's Pastry</span>
         </div>
+
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#service">Service</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
-        <button id="darkModeBtn">Dark Mode</button>
+
+        <button id="darkModeBtn">🌙 Dark Mode</button>
       </nav>
     </header>
+
+    <!-- SERVING -->
+    <main>
+      <div class="cookies-container">
+        <div class="serving-container">
+          <h1>Cookies</h1>
+          <div class="cookies-image">
+            <img src="cookiess.png" alt="Cookies Image" />
+          </div>
+
+          <div class="serving-input">
+            <label for="cookie-servings">Serving:</label>
+            <input type="number" id="cookie-servings" min="1" />
+            <button onclick="cookieIngredients()">Enter</button>
+          </div>
+
+          <div class="note-container">
+            <h3>Note:</h3>
+            <p>
+              Freshly baked cookies with a golden crisp outside and a soft,
+              chewy center. Each bite is filled with rich chocolate chips that
+              melt perfectly in your mouth. A classic treat that’s perfect for
+              any time of the day.
+            </p>
+          </div>
+        </div>
+
+        <!-- INGREDIENT TABLE -->
+        <div class="ingredients-container">
+          <h1>All Ingredients</h1>
+          <table class="ingredient-table">
+            <thead>
+              <tr>
+                <th>Ingredient</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Butter</td>
+                <td id="cookies-butter">0</td>
+              </tr>
+              <tr>
+                <td>White Sugar</td>
+                <td id="cookies-white-sugar">0</td>
+              </tr>
+              <tr>
+                <td>Brown Sugar</td>
+                <td id="cookies-brown-sugar">0</td>
+              </tr>
+              <tr>
+                <td>All Purpose Cream</td>
+                <td id="cookies-cream">0</td>
+              </tr>
+              <tr>
+                <td>Egg</td>
+                <td id="cookies-egg">0</td>
+              </tr>
+              <tr>
+                <td>Vanilla Extract</td>
+                <td id="cookies-vanilla">0</td>
+              </tr>
+              <tr>
+                <td>All Purpose Flour</td>
+                <td id="cookies-flour">0</td>
+              </tr>
+              <tr>
+                <td>Baking Soda</td>
+                <td id="cookies-baking-soda">0</td>
+              </tr>
+              <tr>
+                <td>Fine Salt</td>
+                <td id="cookies-salt">0</td>
+              </tr>
+              <tr>
+                <td>Chocolate Chips</td>
+                <td id="cookies-chocolate">0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- PROCEDURE -->
+        <div class="procedures-container">
+          <h1>Procedures</h1>
+          <ol>
+            <li>
+              Using a spatula, mix butter with white and brown sugar. Mix until
+              light and smooth. (10 mins)
+            </li>
+            <li>
+              Add All Purpose Cream, then mix in eggs and vanilla extract until
+              well combined. (3 mins)
+            </li>
+            <li>
+              Sift flour, baking soda, and salt. Add to cream mixture and mix
+              until just combined. Do not overmix. Mix in chocolate chips. (5
+              mins)
+            </li>
+            <li>
+              Refrigerate dough for about 2 hours. After chilling, mold into
+              golf-ball size portions and chill for another 10 mins. (20 mins)
+            </li>
+            <li>
+              Preheat oven to 350°F for 30 mins. Grease pan and line with
+              aluminum foil. Place cookie dough pieces 3 inches apart, press
+              lightly, and bake for 10–15 mins. Set aside to cool completely.
+              Serve. (45 mins)
+            </li>
+          </ol>
+        </div>
+      </div>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
